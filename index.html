@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="bootstrap.css"> 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <style>
+            header{
+                height: 60px;
+                width: 100%;
+                background-color: black;
+                border:2px solid greenyellow;
+                border-radius: 10px;
+            }
+            body{
+              background-image: url(pic.jpg);
+            }
+            h2{
+                text-align: center;
+                color: aliceblue;
+                
+            }
+            .btn{
+                margin-left: 10%;
+            }
+            #na{
+                width: 100%;
+                height:50px;
+                background-color:rgb(56, 54, 58);
+                border:1px solid whitesmoke;
+                padding-top: 5px;
+                border-radius: 10px;
+                }
+            #text{
+                margin-left: 100px;
+                font-size:30px ;
+                text-decoration: double;
+                text-align: center;
+                font-style: oblique;
+            }
+            #pic{
+               
+
+                border :4px dotted #00FF00;
+            }
+            footer{
+                width: 100%;
+                height:90px;
+                border-radius: 25px;
+                border:2px solid white;
+                background-color: black;
+                color:aqua;
+                text-align: center;
+                font-style: oblique;
+            }
+            #footbtn{
+                border-radius: 15px;
+                border:red 2px solid;
+                box-shadow: aquamarine;
+                background-color:#00FF00;
+                text-align: center;
+                margin-top:10px;
+                    }
+            
+        </style>
+        <script type="text/javascript">
+            var random_images_array = ['image/1.jpg','image/2.jpg','image/3.jpg','image/4.jpg','image/5.jpg','image/6.jpg','image/7.jpg','image/8.jpg','image/9.jpg'];
+            function getRandomImage(imgAr, path) {
+                path = path || 'image/'; // default path here
+                var num = Math.floor( Math.random() * imgAr.length );
+                document.getElementById("pic").src = imgAr[num];
+            }
+             var array = ["Harry Potter","Michel Jackson","Iron Man","Docter Strange","Spider Man","Black Widow","Thor","Captain America","Tony Stark"];             
+                function getRandomText() {
+                    var num = Math.floor( Math.random() * array.length );
+                    document.getElementById("text").innerHTML=array[num];
+                }
+        </script>
+    </head>
+    <body>
+        <header><h2><b>&#9813;&nbsp;Harish.github.io&nbsp;&#9813;</b</h2><br></header>
+        <div id="na">
+         <!--   <button type="button" class="btn btn-warning">BUTTON</button> -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <button type="button" class="btn btn-warning" onclick="getRandomImage(random_images_array, 'image/')">MOVIE</button>
+                        
+                    </div>
+                    <div class="col-lg-3">
+                        <button type="button" class="btn btn-warning" onclick="getRandomText()">CHARACTER</button>
+                    </div>
+                    <div class="col-lg-6">
+                        <p id="text" style="color: aliceblue;">hello</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+    <!--
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2></h2>
+                    <img src="image/9.jpg" id="pic" >
+                </div>
+            </div>
+        </div>
+    -->
+    <div class="container">
+        <div class="row">
+           <div class="col-lg-6">
+            <img src="image/9.jpg" id="pic" height=600px width=500px>
+           </div>
+           <div class="col-lg-6">
+               <div id="right">
+                    <html>
+                        <head>
+                            <style>
+                                #k{
+                                    border-radius: 25px;
+                                border: 2px dotted yellow;
+                                text-align: center;
+                                margin-bottom: 10px;
+                                }
+                                #m{
+                                    border-radius: 25px;
+                                border: 2px dotted yellow;
+                                    text-align: center;
+                                }
+                                #bmi{
+                                    border-radius: 25px;
+                                border: 2px dotted yellow;
+                                text-align: center;
+                                margin-bottom: 10px;
+                                }
+                                #txt{
+                                    color: aliceblue;
+                                    text-align: center;
+                                    font-style: oblique;
+                                    font: bold;
+                                    font-size: 30px;
+                                }
+                                #txt2{
+                                    color: aliceblue;
+                                    text-align: center;
+                                    font-style: oblique;
+                                    font-size: 30px;
+                                    font: bold;
+                                }
+                                #test_z{
+                                    border-radius: 15px;
+                                    border:red 2px solid;
+                                    box-shadow: aquamarine;
+                                    background-color: cornflowerblue;
+                                    text-align: center;
+                                }
+                                #test_b{
+                                    border-radius: 15px;
+                                    border:red 2px solid;
+                                    box-shadow: rgb(255, 127, 127);
+                                    background-color: rgb(237, 200, 100);
+                                    text-align: center;
+                                }
+                                #g{
+                                    color:aqua;
+
+                                }
+                            </style>
+                        </head>
+                        <body>
+                            <div id="k">
+                                <h1 style="color: aquamarine; text-align: center;"><b>UTILITIES</b></h1>
+                            </div>
+                            <div id="txt2">ZODIAC SIGN</div>
+                            <div id="m">
+                                <h2 id='txt'>Here it will display the Zodiac sign</h2>
+                                    <form action='#' method='post'>
+                                        <p style="color: bisque; text-align: center;">Select the day and month, then click the button.</p>
+                                  Day: <select id='s_days'><option value='1'>1</option><option value='2'>2</option><option value='3'>3</option><option value='4'>4</option><option value='5'>5</option><option value='6'>6</option><option value='7'>7</option><option value='8'>8</option><option value='9'>9</option><option value='10'>10</option><option value='11'>11</option><option value='12'>12</option><option value='13'>13</option><option value='14'>14</option><option value='15'>15</option><option value='16'>16</option><option value='17'>17</option><option value='18'>18</option><option value='19'>19</option><option value='20'>20</option><option value='21'>21</option><option value='22'>22</option><option value='23'>23</option><option value='24'>24</option><option value='25'>25</option><option value='26'>26</option><option value='27'>27</option><option value='28'>28</option><option value='29'>29</option><option value='30'>30</option><option value='31'>31</option></select>
+                               Month:<select id='s_m'><option value='1'>January</option><option value='2'>February</option><option value='3'>March</option><option value='4'>April</option><option value='5'>May</option><option value='6'>June</option><option value='7'>July</option><option value='8'>August</option><option value='9'>September</option><option value='10'>October</option><option value='11'>November</option><option value='12'>December</option></select></p>
+                                       <br><br> <button type="button" id='test_z'><b>Click on It</b></button><br/>
+                                      <!--  <input type='button' id='test_z' value='Zodiac sign' /> -->
+                                        </form>
+                                        <script>
+                                        function zodiac(day, month){
+                                        // returns the zodiac sign according to day and month ( https://coursesweb.net/ )
+                                        var zodiac =['', 'Capricorn &#9809;', 'Aquarius &#9810;', 'Pisces &#9811;', 'Aries &#9800;', 'Taurus &#9801;', 'Gemini &#9802;', 'Cancer&#9803;', 'Leo &#9804;', 'Virgo &#9805;', 'Libra &#9806;', 'Scorpio &#9807;', 'Sagittarius &#9808;', 'Capricorn &#9809;'];
+                                        var last_day =['', 19, 18, 20, 20, 21, 21, 22, 22, 21, 22, 21, 20, 19];
+                                         return (day > last_day[month]) ? zodiac[month*1 + 1] : zodiac[month];
+                                        }
+                                        document.getElementById('test_z').onclick = function(){
+                                        document.getElementById('txt').innerHTML = zodiac(document.getElementById('s_days').value, document.getElementById('s_m').value);
+                                        }
+                                </script><br/>
+                            </div><br/>
+                            <!-- this is for bmi calculator-->
+                            <div id="txt2">BMI CALCULATOR</div>
+                            <div id="bmi">
+                                <br/>
+                                  <form name="bmiForm">
+                                 <p id="g"> Your Weight(kg): <input type="text" name="weight" size="10"></p>
+                                 <p id="g"> Your Height(cm): <input type="text" name="height" size="10"></p><br />
+                                 <button type="button" id='test_b' onclick="calculateBmi()"><b>BMI Calculate</b></button><br/><br/>
+                             <!--    <input type="button" value="Calculate BMI" onClick="calculateBmi()"><br /><br  /> -->
+                                 <p id="g"> Your BMI : <input type="text" name="bmi" size="25"></p>
+                                <p id="g">  This Means: <input type="text" name="meaning" size="25"></p><br />
+                                <button type="reset" id='test_b' ><b>RESET</b></button><br>
+                                <!--  <input type="reset" value="Reset" /> -->
+                                  </form>
+                                  
+                                  <script language="JavaScript">
+                                  
+                                  function calculateBmi() {
+                                  var weight = document.bmiForm.weight.value
+                                  var height = document.bmiForm.height.value
+                                  if(weight > 0 && height > 0){
+                                  var finalBmi = weight/(height/100*height/100)
+                                  document.bmiForm.bmi.value = finalBmi
+                                  if(finalBmi < 18.5){
+                                  document.bmiForm.meaning.value = "That you are too thin."
+                                  }
+                                  if(finalBmi > 18.5 && finalBmi < 25){
+                                  document.bmiForm.meaning.value = "That you are healthy."
+                                  }
+                                  if(finalBmi > 25){
+                                  document.bmiForm.meaning.value = "That you have overweight."
+                                  }
+                                  }
+                                  else{
+                                  alert("Please Fill in everything correctly")
+                                  }
+                                  }
+                                  //-->
+                                  </script><br/>
+                                  
+                            </div>
+                        </body>
+                    </html>
+               </div>
+              
+           </div>
+        </div>
+    </div>
+    <footer><button type="button" id="footbtn" onclick="info()"><b>Show</b></button>&nbsp;&nbsp;&copy; Contact Me &nbsp;&nbsp;<button type="button" id="footbtn" onclick="hide()"><b>Hide</b></button>
+        <p id="inf"></p>
+        <script>
+            function info()
+            {
+                document.getElementById("inf").innerHTML="Reg no:201800101 &nbsp;&nbsp;&nbsp; Develop by:&#9813;&nbsp;Harish chandra Das &nbsp;&nbsp;&nbsp; Email id:Harishdas714@gmail.com";
+            }
+            function hide()
+            {
+                document.getElementById("inf").innerHTML="*******************************";
+            }
+
+        </script>
+    </footer>
+    </body>
+</html>
